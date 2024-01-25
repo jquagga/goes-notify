@@ -1,27 +1,7 @@
 {
-  "current_interview_date_str": "",
-  "enrollment_location_id": "",
-  "enrollment_location_name": "",
+  "current_interview_date_str": "December 10, 2025",
+  "enrollment_location_id": "5142",
+  "enrollment_location_name": "Dulles",
   "logfile": "",
-
-  "email_from": "",
-  "email_display_name": "GOES-notify Alerts",
-  "email_to": [""],
-  "email_server": "localhost",
-  "email_port": 25,
-  "email_username": "",
-  "email_password": "",
-  "email_disable_tls": false,
-
-  "__comment": "Below are optional:",
-  "use_gmail": true,
-  "gmail_password": "",
-  "no_email": false,
-  "no_spamming": true,
-
-  "notify_osx": false,
-  "twilio_account_sid": "",
-  "twilio_auth_token": "",
-  "twilio_from_number": "example: +18005551234",
-  "twilio_to_number": "example: +18005551234"
+  "ntfy_url": "https://ntfy.sh/CHANGEME"
 }
