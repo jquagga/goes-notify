@@ -2,6 +2,8 @@
 
 This is a small modification to [Drewster727's excellent goes-notify](https://github.com/Drewster727). It largely does the same thing, however instead of email/txtmsg it sends notifications with [ntfy.sh](https://www.ntfy.sh). This lets you install an app on your phone and get push notifications when an appointment becomes available.  It was also run through python 2to3 to move to python3.
 
+**NOTE** There is also an apprise branch which utilizes [apprise](https://github.com/caronc/apprise) to notify any number of services, send text messages, whatever apprise supports.  It does however add the dependency of apprise (whereas the main branch only needs python-requests both to pull the information from the internet and post to ntfy.sh)
+
 This app will simply parse json output from the interview scheduler for many of CBP's Trusted Traveler Programs, including Global Entry, NEXUS, SENTRI, US/Mexico FAST, and US/Canada FAST. You don't need to provide a login, it will simply check the available dates against your current interview date, then notify you if a better date can be locked in.
 
 Based on the [ge-cancellation-checker](https://github.com/davidofwatkins/ge-cancellation-checker) that originally utilized phantomjs to login as the user
