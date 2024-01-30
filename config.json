@@ -1,7 +1,7 @@
 {
   "current_interview_date_str": "December 10, 2025",
   "enrollment_location_id": "5142",
-  "enrollment_location_name": "Dulles",
+  "enrollment_location_name": "Dulles International Airport",
   "logfile": "",
-  "ntfy_url": "https://ntfy.sh/CHANGEME"
+  "apprise_url": "ntfy://CHANGEME/,dbus://"
 }

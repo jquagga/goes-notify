@@ -10,6 +10,7 @@ import sys
 import os
 # import glob
 import requests
+import apprise
 # import hashlib
 
 from datetime import datetime
@@ -20,7 +21,6 @@ from os import path
 
 GOES_URL_FORMAT = 'https://ttp.cbp.dhs.gov/schedulerapi/slots?orderBy=soonest&limit=3&locationId={0}&minimum=1'
 
-
 def notify_sms(settings, dates):
     for avail_apt in dates:
 
@@ -29,10 +29,13 @@ def notify_sms(settings, dates):
         if not location_name:
             location_name = location_id
 
-        body = 'New GOES appointment available at %s on %s' % (
+        apobj = apprise.Apprise()
+        apobj.add(settings['apprise_url'])
+        logging.info('Sending notification.')
+        apobj.notify(
+            body='New GOES appointment available at %s on %s' % (
             location_name, avail_apt)
-        logging.info('Sending ntfy.')
-        requests.post(settings['ntfy_url'], data=body.encode(encoding='utf-8'))
+        )
 
 
 def main(settings):
